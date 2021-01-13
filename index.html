@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="w3.css">
+  <link rel="stylesheet" href="style.css">
+  <title>GBFitness Official</title>
+</head>
+<body>
+  
+  <! ===HEADER===>
+  
+  <header class="header-content">
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
+      <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+      <a href="#" class="w3-bar-item w3-button w3-medium">Magunkról</a>
+      <a href="#" class="w3-bar-item w3-button w3-medium">Óráink</a>
+      <a href="#" class="w3-bar-item w3-button w3-medium">Órarend</a>
+      <a href="#" class="w3-bar-item w3-button w3-medium">Online edzések</a>
+      <a href="#" class="w3-bar-item w3-button w3-medium" >Elérhetőségek</a>
+      <a href="#" class="w3-bar-item w3-button w3-medium">Bármi egyéb</a>
+    </div>
+    <div class="w3-teal">
+      <button class="w3-button w3-teal w3-xxxlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
+    </div>
+    <script>
+function openLeftMenu() {
+  document.getElementById("leftMenu").style.display = "block";
+}
+
+function closeLeftMenu() {
+  document.getElementById("leftMenu").style.display = "none";
+}
+    </script>
+  </header>
+    
+ <!=== END OF HEADER ===>
+  <div class="w3-container">
+    <h1>A GBFitness Lorem Ipsumja</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel blandit dolor. Etiam in metus pulvinar, tempor nibh eget, interdum risus. Praesent sed nulla imperdiet, hendrerit purus quis, tincidunt lectus. Vestibulum vitae orci nulla. In quis sem semper, ultricies elit eu, bibendum ante. Nullam elementum nunc nec lorem consequat bibendum. Duis maximus vel diam tincidunt condimentum. Duis vehicula urna sed urna ultricies, scelerisque convallis libero laoreet. Ut mattis enim vitae leo eleifend, id sodales nisl condimentum. Etiam faucibus quam dolor, eu volutpat neque placerat sit amet. Nam a suscipit turpis.</p>
+    <h2>Miért olyan baromi jó nálunk edzeni Lorem Ipsum?</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel blandit dolor. Etiam in metus pulvinar, tempor nibh eget, interdum risus. Praesent sed nulla imperdiet, hendrerit purus quis, tincidunt lectus. Vestibulum vitae orci nulla. In quis sem semper, ultricies elit eu, bibendum ante. Nullam elementum nunc nec lorem consequat bibendum. Duis maximus vel diam tincidunt condimentum. Duis vehicula urna sed urna ultricies, scelerisque convallis libero laoreet. Ut mattis enim vitae leo eleifend, id sodales nisl condimentum. Etiam faucibus quam dolor, eu volutpat neque placerat sit amet. Nam a suscipit turpis.</p>
+    <footer>
+      <h3>Gyere nézz körül itt</h3>
+      <a href="#">Insta</a> <a href="#">Facebook</a> <a href="#">Tiktok</a> <a href="#">Egyéb oldal</a>
+    </footer>
+  </div>
+</body>
+</html>
