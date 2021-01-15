@@ -5,21 +5,26 @@
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="w3.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
   <title>GBFitness Official</title>
 </head>
 <body>
   
-  <! ===HEADER===>
+  <!-- HEADER -->
   
   <header class="header-content">
     <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
-      <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
-      <a href="#" class="w3-bar-item w3-button w3-medium">Magunkról</a>
-      <a href="#" class="w3-bar-item w3-button w3-medium">Óráink</a>
-      <a href="#" class="w3-bar-item w3-button w3-medium">Órarend</a>
-      <a href="#" class="w3-bar-item w3-button w3-medium">Online edzések</a>
-      <a href="#" class="w3-bar-item w3-button w3-medium" >Elérhetőségek</a>
-      <a href="#" class="w3-bar-item w3-button w3-medium">Bármi egyéb</a>
+      <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-medium">&times;</button>
+      <nav>
+        <a href="#" class="w3-bar-item w3-button w3-medium">Magunkról</a>
+        <a href="#" class="w3-bar-item w3-button w3-medium">Óráink</a>
+        <a href="#" class="w3-bar-item w3-button w3-medium">Órarend</a>
+        <a href="#" class="w3-bar-item w3-button w3-medium">Online edzések</a>
+        <a href="#" class="w3-bar-item w3-button w3-medium" >Elérhetőségek</a>
+        <a href="#" class="w3-bar-item w3-button w3-medium">Képek</a>
+        <a class="social-media" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a> <a class="social-media" href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a><a class="social-media"><span class="iconify" data-icon="simple-icons:tiktok" data-inline="false"></span></a>
+      </nav>
     </div>
     <div class="w3-teal">
       <button class="w3-button w3-teal w3-xxxlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
@@ -35,16 +40,67 @@ function closeLeftMenu() {
     </script>
   </header>
     
- <!=== END OF HEADER ===>
+ <!-- END OF HEADER -->
+  
   <div class="w3-container">
     <h1>A GBFitness Lorem Ipsumja</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel blandit dolor. Etiam in metus pulvinar, tempor nibh eget, interdum risus. Praesent sed nulla imperdiet, hendrerit purus quis, tincidunt lectus. Vestibulum vitae orci nulla. In quis sem semper, ultricies elit eu, bibendum ante. Nullam elementum nunc nec lorem consequat bibendum. Duis maximus vel diam tincidunt condimentum. Duis vehicula urna sed urna ultricies, scelerisque convallis libero laoreet. Ut mattis enim vitae leo eleifend, id sodales nisl condimentum. Etiam faucibus quam dolor, eu volutpat neque placerat sit amet. Nam a suscipit turpis.</p>
+    <div class="w3-center">
+      <a class="w3-button w3-round-xxlarge w3-large" href="#">Órarend</a>
+    </div>
     <h2>Miért olyan baromi jó nálunk edzeni Lorem Ipsum?</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel blandit dolor. Etiam in metus pulvinar, tempor nibh eget, interdum risus. Praesent sed nulla imperdiet, hendrerit purus quis, tincidunt lectus. Vestibulum vitae orci nulla. In quis sem semper, ultricies elit eu, bibendum ante. Nullam elementum nunc nec lorem consequat bibendum. Duis maximus vel diam tincidunt condimentum. Duis vehicula urna sed urna ultricies, scelerisque convallis libero laoreet. Ut mattis enim vitae leo eleifend, id sodales nisl condimentum. Etiam faucibus quam dolor, eu volutpat neque placerat sit amet. Nam a suscipit turpis.</p>
-    <footer>
-      <h3>Gyere nézz körül itt</h3>
-      <a href="#">Insta</a> <a href="#">Facebook</a> <a href="#">Tiktok</a> <a href="#">Egyéb oldal</a>
-    </footer>
+    <div class="w3-content w3-display-container">
+      <img class="mySlides w3-image" src="assets/other-sports%20background.jpeg">
+      <img class="mySlides w3-image" src="assets/pole-dance%20background.jpeg">
+      <img class="mySlides w3-image" src="assets/spinning%20background.jpeg">
+      <div class="w3-center w3-container w3-section w3-xxlarge w3-text-white w3-display-bottommiddle">
+      <! -- nyíl balra -->
+      <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
+      <! -- nyíl jobbra -->
+      <div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
+      <! -- badges for change the pics -->
+      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+    </div>
   </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+</div>
+  </div>
+    <footer>
+      <p><small>made with ♥ by Kovács Szintia <br><a class="social-media" href="#"><i class="fa fa-github" aria-hidden="true"></i></a></small></p>
+    </footer>
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 </body>
 </html>
